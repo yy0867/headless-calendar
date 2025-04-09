@@ -1,3 +1,20 @@
+## Styling with Tailwind CSS
+
+This package uses Tailwind CSS for styling. To ensure that the Tailwind classes are properly applied in your project, you need to configure your Tailwind CSS to scan the calendar component files.
+
+Add the following to your `tailwind.config.js` or `tailwind.config.ts`:
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    // ... your existing content paths
+    "./node_modules/@bbd-seyoung/headless-calendar/dist/**/*.js"
+  ],
+  // ... rest of your config
+}
+```
+
 # Headless Calendar
 
 A flexible and customizable headless calendar component for React applications.

@@ -1,3 +1,6 @@
+// Styles
+import './styles.css';
+
 // Components
 export { default as Calendar } from './components/Calendar';
 export { default as CalendarHeader } from './components/CalendarHeader';
