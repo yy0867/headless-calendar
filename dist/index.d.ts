@@ -1,4 +1,3 @@
-import './styles.css';
 export { default as Calendar } from './components/Calendar';
 export { default as CalendarHeader } from './components/CalendarHeader';
 export { default as CalendarGrid } from './components/CalendarGrid';

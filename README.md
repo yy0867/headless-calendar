@@ -1,18 +1,45 @@
-## Styling with Tailwind CSS
+## Styling
 
-This package uses Tailwind CSS for styling. To ensure that the Tailwind classes are properly applied in your project, you need to configure your Tailwind CSS to scan the calendar component files.
+This package is a true headless component library, which means it comes with minimal styling. All components accept `className` props that you can use to apply your own styles.
 
-Add the following to your `tailwind.config.js` or `tailwind.config.ts`:
+### Example with Tailwind CSS
 
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    // ... your existing content paths
-    "./node_modules/@bbd-seyoung/headless-calendar/dist/**/*.js"
-  ],
-  // ... rest of your config
-}
+```tsx
+<Calendar className="w-full h-full">
+  <CalendarHeader className="flex justify-between items-center p-4 bg-gray-100 rounded-t-lg">
+    <div className="flex gap-2 items-center">
+      <CalendarHeader.PrevButton className="p-2 rounded hover:bg-gray-200" />
+      <CalendarHeader.Title className="text-lg font-semibold" />
+      <CalendarHeader.NextButton className="p-2 rounded hover:bg-gray-200" />
+    </div>
+    <CalendarHeader.TodayButton className="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600" />
+  </CalendarHeader>
+  
+  <CalendarWeekdays className="grid grid-cols-7 text-center py-2 border-b">
+    {(names) => names.map((name, i) => (
+      <div key={i} className="text-sm font-medium text-gray-600">{name}</div>
+    ))}
+  </CalendarWeekdays>
+  
+  <CalendarGrid className="grid grid-cols-7 gap-1 p-4">
+    {({ days }) =>
+      days.map((day, index) => (
+        <div 
+          key={index}
+          className={`
+            p-2 text-center rounded cursor-pointer
+            ${day.isCurrentMonth ? "" : "text-gray-400"}
+            ${day.isToday ? "border border-blue-500" : ""}
+            ${day.isSelected ? "bg-blue-500 text-white" : "hover:bg-gray-100"}
+          `}
+          onClick={() => day.selectDate(day.date)}
+        >
+          {day.day}
+        </div>
+      ))
+    }
+  </CalendarGrid>
+</Calendar>
 ```
 
 # Headless Calendar

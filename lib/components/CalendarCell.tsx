@@ -21,7 +21,7 @@ const CalendarCell = ({ className, day, children }: CalendarCellProps) => {
         {days.map((calendarDay, index) => (
           <button
             key={index}
-            className={`${calendarDay.isSelected && "font-semibold"} ${className}`}
+            className={className}
             onClick={() => selectDate(calendarDay.date)}
           >
             {calendarDay.day}

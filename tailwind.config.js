@@ -1,11 +1,7 @@
+// This file is no longer used as we've removed TailwindCSS from the package
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./lib/**/*.{js,ts,jsx,tsx}",
-    "./dist/**/*.{js,ts,jsx,tsx}"
-  ],
-  theme: {
-    extend: {},
-  },
+  content: [],
+  theme: {},
   plugins: [],
 }

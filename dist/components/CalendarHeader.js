@@ -24,7 +24,7 @@ const TodayButton = ({ className, label = "Today", children, }) => {
 };
 const CalendarHeader = ({ className, children }) => {
     if (!children) {
-        return (_jsxs("header", { className: `flex justify-between items-center ${className}`, children: [_jsxs("div", { className: "flex gap-8 justify-between items-center", children: [_jsx(PrevButton, {}), _jsx(Title, {}), _jsx(NextButton, {})] }), _jsx(TodayButton, {})] }));
+        return (_jsxs("header", { className: className, children: [_jsxs("div", { children: [_jsx(PrevButton, {}), _jsx(Title, {}), _jsx(NextButton, {})] }), _jsx(TodayButton, {})] }));
     }
     return _jsx("header", { className: className, children: children });
 };

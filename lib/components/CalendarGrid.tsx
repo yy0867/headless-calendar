@@ -23,8 +23,8 @@ const CalendarGrid = ({ className, children }: CalendarGridProps) => {
   };
 
   return (
-    <div className={`flex flex-col w-full ${className}`}>
-      <div className={"w-full h-full grid grid-cols-7"}>{renderCell()}</div>
+    <div className={className}>
+      <div>{renderCell()}</div>
     </div>
   );
 };

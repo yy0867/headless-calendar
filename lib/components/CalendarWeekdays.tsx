@@ -11,7 +11,7 @@ const CalendarWeekdays = ({ className, children }: CalendarWeekdaysProps) => {
 
   if (typeof children === "function") {
     return (
-      <div className={`grid grid-cols-7 text-center ${className}`}>
+      <div className={className}>
         {children(weekdayNames)}
       </div>
     );
@@ -19,14 +19,14 @@ const CalendarWeekdays = ({ className, children }: CalendarWeekdaysProps) => {
 
   if (children) {
     return (
-      <div className={`grid grid-cols-7 text-center ${className}`}>
+      <div className={className}>
         {children}
       </div>
     );
   }
 
   return (
-    <div className={`grid grid-cols-7 text-center ${className}`}>
+    <div className={className}>
       {weekdayNames.map((name, index) => (
         <div key={index}>{name}</div>
       ))}

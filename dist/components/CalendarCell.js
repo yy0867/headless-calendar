@@ -6,7 +6,7 @@ const CalendarCell = ({ className, day, children }) => {
         return _jsx("div", { className: className, children: children });
     }
     if (!day && days.length > 0) {
-        return (_jsx(_Fragment, { children: days.map((calendarDay, index) => (_jsx("button", { className: `${calendarDay.isSelected && "font-semibold"} ${className}`, onClick: () => selectDate(calendarDay.date), children: calendarDay.day }, index))) }));
+        return (_jsx(_Fragment, { children: days.map((calendarDay, index) => (_jsx("button", { className: className, onClick: () => selectDate(calendarDay.date), children: calendarDay.day }, index))) }));
     }
     if (!day)
         return null;

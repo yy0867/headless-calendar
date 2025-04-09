@@ -102,8 +102,8 @@ const CalendarHeader: FC<CalendarHeaderProps> & {
 } = ({ className, children }) => {
   if (!children) {
     return (
-      <header className={`flex justify-between items-center ${className}`}>
-        <div className={"flex gap-8 justify-between items-center"}>
+      <header className={className}>
+        <div>
           <PrevButton />
           <Title />
           <NextButton />

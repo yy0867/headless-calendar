@@ -35,7 +35,7 @@ const Calendar = ({
     weekdayNames={weekdayNames}
     monthNames={monthNames}
   >
-    <div className={`w-full h-full ${className}`}>{children}</div>
+    <div className={className}>{children}</div>
   </CalendarProvider>
 );
 

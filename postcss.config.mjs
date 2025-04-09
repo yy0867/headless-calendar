@@ -1,5 +1,6 @@
+// This file is no longer used as we've removed TailwindCSS from the package
 const config = {
-  plugins: ["@tailwindcss/postcss"],
+  plugins: [],
 };
 
 export default config;

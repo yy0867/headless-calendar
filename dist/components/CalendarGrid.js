@@ -9,7 +9,7 @@ const CalendarGrid = ({ className, children }) => {
             return children;
         return days.map((day, index) => _jsx("div", { children: day.day }, index));
     };
-    return (_jsx("div", { className: `flex flex-col w-full ${className}`, children: _jsx("div", { className: "w-full h-full grid grid-cols-7", children: renderCell() }) }));
+    return (_jsx("div", { className: className, children: _jsx("div", { children: renderCell() }) }));
 };
 export default CalendarGrid;
 //# sourceMappingURL=CalendarGrid.js.map
