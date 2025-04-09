@@ -1,14 +1,16 @@
-import { jsx as _jsx } from "react/jsx-runtime";
-import { useCalendar } from "@/lib/context/CalendarContext";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
+const CalendarContext_1 = require("@/lib/context/CalendarContext");
 const CalendarWeekdays = ({ className, children }) => {
-    const { weekdayNames } = useCalendar();
+    const { weekdayNames } = (0, CalendarContext_1.useCalendar)();
     if (typeof children === "function") {
-        return (_jsx("div", { className: `grid grid-cols-7 text-center ${className}`, children: children(weekdayNames) }));
+        return ((0, jsx_runtime_1.jsx)("div", { className: `grid grid-cols-7 text-center ${className}`, children: children(weekdayNames) }));
     }
     if (children) {
-        return (_jsx("div", { className: `grid grid-cols-7 text-center ${className}`, children: children }));
+        return ((0, jsx_runtime_1.jsx)("div", { className: `grid grid-cols-7 text-center ${className}`, children: children }));
     }
-    return (_jsx("div", { className: `grid grid-cols-7 text-center ${className}`, children: weekdayNames.map((name, index) => (_jsx("div", { children: name }, index))) }));
+    return ((0, jsx_runtime_1.jsx)("div", { className: `grid grid-cols-7 text-center ${className}`, children: weekdayNames.map((name, index) => ((0, jsx_runtime_1.jsx)("div", { children: name }, index))) }));
 };
-export default CalendarWeekdays;
+exports.default = CalendarWeekdays;
 //# sourceMappingURL=CalendarWeekdays.js.map

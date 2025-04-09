@@ -1,4 +1,7 @@
-export const DEFAULT_WEEKDAY_NAMES = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DEFAULT_MONTH_NAMES = exports.DEFAULT_WEEKDAY_NAMES = void 0;
+exports.DEFAULT_WEEKDAY_NAMES = [
     "S", // Sunday
     "M", // Monday
     "T", // Tuesday
@@ -7,7 +10,7 @@ export const DEFAULT_WEEKDAY_NAMES = [
     "F", // Friday
     "S", // Saturday
 ];
-export const DEFAULT_MONTH_NAMES = [
+exports.DEFAULT_MONTH_NAMES = [
     "Jan", // January
     "Feb", // February
     "Mar", // March

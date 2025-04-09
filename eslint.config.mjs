@@ -1,5 +1,4 @@
 import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -11,10 +10,11 @@ const compat = new FlatCompat({
 });
 
 export default [
-  js.configs.recommended,
   ...compat.extends(
+    "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
   ),
   {
     ignores: ["dist/**", "node_modules/**", ".next/**"],
@@ -22,12 +22,7 @@ export default [
   {
     rules: {
       "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
+      "react/prop-types": "off"
     },
-  },
-  {
-    files: ["**/*.ts", "**/*.tsx"],
-    ...compat.extends("plugin:@typescript-eslint/recommended"),
-    rules: {},
   }
 ];
