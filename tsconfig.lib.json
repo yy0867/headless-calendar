@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "rootDir": "lib",
+    "skipLibCheck": true,
+    "noEmit": false,
+    "module": "esnext",
+    "moduleResolution": "node"
+  },
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
+}

@@ -1,0 +1,30 @@
+# Source files
+lib/
+
+# Next.js files
+.next/
+next.config.ts
+next-env.d.ts
+app/
+pages/
+public/
+
+# Config files
+tsconfig.json
+tsconfig.lib.json
+tsconfig.*.json
+tsconfig.*.tsbuildinfo
+eslint.config.mjs
+postcss.config.mjs
+tailwind.config.js
+
+# IDE files
+.idea/
+.vscode/
+
+# Other files
+node_modules/
+.git/
+.github/
+.gitignore
+README.md
