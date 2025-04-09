@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0191f2eb-1e13-4937-ba56-95b849a02bc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/Calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/Calendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/CalendarCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/CalendarCell.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/components/CalendarGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/CalendarGrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/CalendarHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/CalendarHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/CalendarWeekdays.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/CalendarWeekdays.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +82,7 @@
       <workItem from="1743758660599" duration="400000" />
       <workItem from="1744161843365" duration="3000" />
       <workItem from="1744169688245" duration="3225000" />
-      <workItem from="1744178207397" duration="6482000" />
+      <workItem from="1744178207397" duration="6695000" />
     </task>
     <servers />
   </component>

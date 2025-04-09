@@ -9,7 +9,7 @@ const CalendarGrid = ({ className, children }) => {
             return children;
         return days.map((day, index) => _jsx("div", { children: day.day }, index));
     };
-    return (_jsx("div", { className: className, children: _jsx("div", { children: renderCell() }) }));
+    return _jsx("div", { className: className, children: renderCell() });
 };
 export default CalendarGrid;
 //# sourceMappingURL=CalendarGrid.js.map

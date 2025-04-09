@@ -22,11 +22,7 @@ const CalendarGrid = ({ className, children }: CalendarGridProps) => {
     return days.map((day, index) => <div key={index}>{day.day}</div>);
   };
 
-  return (
-    <div className={className}>
-      <div>{renderCell()}</div>
-    </div>
-  );
+  return <div className={className}>{renderCell()}</div>;
 };
 
 export default CalendarGrid;
