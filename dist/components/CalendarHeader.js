@@ -16,7 +16,7 @@ const Title = ({ className, format: formatFn, children }) => {
     if (formatFn) {
         return _jsx("div", { className: className, children: formatFn(month, year, monthNames) });
     }
-    return _jsx("p", { children: `${monthNames[month]}, ${year}` });
+    return _jsx("p", { className: className, children: `${monthNames[month]}, ${year}` });
 };
 const TodayButton = ({ className, label = "Today", children, }) => {
     const { goToToday } = useCalendar();
