@@ -1,6 +1,6 @@
 {
   "name": "@bbd-seyoung/headless-calendar",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "scripts": {
     "lint": "eslint .",
     "clean": "rm -rf dist",
