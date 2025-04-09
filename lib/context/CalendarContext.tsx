@@ -1,15 +1,6 @@
-import {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useMemo,
-  useState,
-} from "react";
+import { createContext, PropsWithChildren, useContext, useMemo, useState } from "react";
 import { CalendarContextType } from "../types/calendar.types";
-import {
-  DEFAULT_MONTH_NAMES,
-  DEFAULT_WEEKDAY_NAMES,
-} from "../constants/calendar.constants";
+import { DEFAULT_MONTH_NAMES, DEFAULT_WEEKDAY_NAMES } from "../constants/calendar.constants";
 import {
   addMonths,
   eachDayOfInterval,
@@ -39,6 +30,7 @@ interface CalendarProviderProps {
   // Actions
   onDateSelect?: (date: Date) => void;
   onSelectedDatesChange?: (dates: Date[]) => void;
+  onClickToday?: () => void;
 }
 
 export const CalendarProvider = ({
@@ -49,6 +41,7 @@ export const CalendarProvider = ({
   monthNames = DEFAULT_MONTH_NAMES,
   onDateSelect,
   onSelectedDatesChange,
+  onClickToday,
   children,
 }: PropsWithChildren<CalendarProviderProps>) => {
   const today = new Date();
@@ -91,7 +84,10 @@ export const CalendarProvider = ({
 
   const goToPrevMonth = () => setCurrentDate((prev) => subMonths(prev, 1));
 
-  const goToToday = () => setCurrentDate(today);
+  const goToToday = () => {
+    setCurrentDate(today);
+    onClickToday?.();
+  }
 
   const goToMonth = (month: number, year: number) =>
     setCurrentDate(new Date(year, month, 1));
@@ -103,7 +99,7 @@ export const CalendarProvider = ({
     const isAlreadySelected = isDateSelected(date);
 
     if (externalSelectedDates && onSelectedDatesChange) {
-      let newSelectedDates: Date[] = [];
+      let newSelectedDates: Date[];
       if (isAlreadySelected) {
         newSelectedDates = externalSelectedDates.filter(
           (selectedDate) => !isSameDay(selectedDate, date),
@@ -113,7 +109,7 @@ export const CalendarProvider = ({
       }
       onSelectedDatesChange(newSelectedDates);
     } else {
-      let newSelectedDates;
+      let newSelectedDates: Date[];
       if (isAlreadySelected) {
         newSelectedDates = internalSelectedDates.filter(
           (selectedDate) => !isSameDay(selectedDate, date),

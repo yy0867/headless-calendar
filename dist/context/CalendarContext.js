@@ -1,9 +1,9 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import { createContext, useContext, useMemo, useState, } from "react";
-import { DEFAULT_MONTH_NAMES, DEFAULT_WEEKDAY_NAMES, } from "../constants/calendar.constants";
+import { createContext, useContext, useMemo, useState } from "react";
+import { DEFAULT_MONTH_NAMES, DEFAULT_WEEKDAY_NAMES } from "../constants/calendar.constants";
 import { addMonths, eachDayOfInterval, endOfMonth, endOfWeek, getDate, getMonth, getYear, isSameDay, isSameMonth, startOfMonth, startOfWeek, subMonths, } from "date-fns";
 const CalendarContext = createContext(undefined);
-export const CalendarProvider = ({ initialMonth, initialYear, selectedDates: externalSelectedDates, weekdayNames = DEFAULT_WEEKDAY_NAMES, monthNames = DEFAULT_MONTH_NAMES, onDateSelect, onSelectedDatesChange, children, }) => {
+export const CalendarProvider = ({ initialMonth, initialYear, selectedDates: externalSelectedDates, weekdayNames = DEFAULT_WEEKDAY_NAMES, monthNames = DEFAULT_MONTH_NAMES, onDateSelect, onSelectedDatesChange, onClickToday, children, }) => {
     const today = new Date();
     const [currentDate, setCurrentDate] = useState(() => {
         if (initialMonth !== undefined && initialYear !== undefined) {
@@ -31,13 +31,16 @@ export const CalendarProvider = ({ initialMonth, initialYear, selectedDates: ext
     }, [currentDate, selectedDates]);
     const goToNextMonth = () => setCurrentDate((prev) => addMonths(prev, 1));
     const goToPrevMonth = () => setCurrentDate((prev) => subMonths(prev, 1));
-    const goToToday = () => setCurrentDate(today);
+    const goToToday = () => {
+        setCurrentDate(today);
+        onClickToday === null || onClickToday === void 0 ? void 0 : onClickToday();
+    };
     const goToMonth = (month, year) => setCurrentDate(new Date(year, month, 1));
     const isDateSelected = (date) => selectedDates.some((selectedDate) => isSameDay(selectedDate, date));
     const selectDate = (date) => {
         const isAlreadySelected = isDateSelected(date);
         if (externalSelectedDates && onSelectedDatesChange) {
-            let newSelectedDates = [];
+            let newSelectedDates;
             if (isAlreadySelected) {
                 newSelectedDates = externalSelectedDates.filter((selectedDate) => !isSameDay(selectedDate, date));
             }

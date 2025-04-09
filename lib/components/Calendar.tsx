@@ -8,6 +8,7 @@ interface CalendarProps {
   selectedDates?: Date[];
   onDateSelect?: (date: Date) => void;
   onSelectedDatesChange?: (dates: Date[]) => void;
+  onClickToday?: () => void;
   weekdayNames?: string[];
   monthNames?: string[];
 }
@@ -19,6 +20,7 @@ const Calendar = ({
   selectedDates,
   onDateSelect,
   onSelectedDatesChange,
+  onClickToday,
   weekdayNames,
   monthNames,
   children,
@@ -29,6 +31,7 @@ const Calendar = ({
     selectedDates={selectedDates}
     onDateSelect={onDateSelect}
     onSelectedDatesChange={onSelectedDatesChange}
+    onClickToday={onClickToday}
     weekdayNames={weekdayNames}
     monthNames={monthNames}
   >
