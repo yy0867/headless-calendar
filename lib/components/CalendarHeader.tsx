@@ -71,7 +71,7 @@ const Title = ({ className, format: formatFn, children }: TitleProps) => {
     return <div className={className}>{formatFn(month, year, monthNames)}</div>;
   }
 
-  return <p>{`${monthNames[month]}, ${year}`}</p>;
+  return <p className={className}>{`${monthNames[month]}, ${year}`}</p>;
 };
 
 interface TodayButtonProps {

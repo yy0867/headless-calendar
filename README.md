@@ -83,7 +83,7 @@ The main component that provides context for all calendar functionality.
   onDateSelect={(date) => console.log(date)}
   onSelectedDatesChange={(dates) => console.log(dates)}
   weekdayNames={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']} // Default: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
-  monthNames={['January', 'February', ...]} // Default: abbreviated month names
+  monthNames={['January', 'February', /*...*/]} // Default: abbreviated month names
 >
   {/* Calendar children */}
 </Calendar>

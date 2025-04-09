@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "noEmit": false,
     "target": "ES2017",
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
