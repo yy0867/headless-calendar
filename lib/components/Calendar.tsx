@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { CalendarProvider } from "@/lib/context/CalendarContext";
+import { CalendarProvider } from "../context/CalendarContext";
 
 interface CalendarProps {
   className?: string;

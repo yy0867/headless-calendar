@@ -1,5 +1,3 @@
-"use client";
-
 import {
   createContext,
   PropsWithChildren,
@@ -7,11 +5,11 @@ import {
   useMemo,
   useState,
 } from "react";
-import { CalendarContextType } from "@/lib/types/calendar.types";
+import { CalendarContextType } from "../types/calendar.types";
 import {
   DEFAULT_MONTH_NAMES,
   DEFAULT_WEEKDAY_NAMES,
-} from "@/lib/constants/calendar.constants";
+} from "../constants/calendar.constants";
 import {
   addMonths,
   eachDayOfInterval,

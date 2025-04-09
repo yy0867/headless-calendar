@@ -13,9 +13,6 @@
     "jsx": "react-jsx",
     "incremental": true,
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    },
     "declaration": true
   },
   "include": ["**/*.ts", "**/*.tsx"],

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useCalendar } from "@/lib/context/CalendarContext";
+import { useCalendar } from "../context/CalendarContext";
 
 interface CalendarWeekdaysProps {
   className?: string;

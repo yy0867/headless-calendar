@@ -1,8 +1,6 @@
-"use client";
-
-import { CalendarDay } from "@/lib/types/calendar.types";
+import { CalendarDay } from "../types/calendar.types";
 import { ReactNode } from "react";
-import { useCalendar } from "@/lib/context/CalendarContext";
+import { useCalendar } from "../context/CalendarContext";
 
 interface CalendarCellProps {
   className?: string;
