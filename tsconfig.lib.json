@@ -1,5 +1,4 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,
@@ -8,9 +7,13 @@
     "rootDir": "lib",
     "skipLibCheck": true,
     "noEmit": false,
+    "target": "ES2017",
     "module": "commonjs",
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true
   },
   "include": ["lib/**/*"],
   "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"]
