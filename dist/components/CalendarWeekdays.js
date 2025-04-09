@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("react/jsx-runtime");
-const CalendarContext_1 = require("@/lib/context/CalendarContext");
+const CalendarContext_1 = require("../context/CalendarContext");
 const CalendarWeekdays = ({ className, children }) => {
     const { weekdayNames } = (0, CalendarContext_1.useCalendar)();
     if (typeof children === "function") {

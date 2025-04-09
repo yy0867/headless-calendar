@@ -1,10 +1,9 @@
 "use strict";
-"use client";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.useCalendar = exports.CalendarProvider = void 0;
 const jsx_runtime_1 = require("react/jsx-runtime");
 const react_1 = require("react");
-const calendar_constants_1 = require("@/lib/constants/calendar.constants");
+const calendar_constants_1 = require("../constants/calendar.constants");
 const date_fns_1 = require("date-fns");
 const CalendarContext = (0, react_1.createContext)(undefined);
 const CalendarProvider = ({ initialMonth, initialYear, selectedDates: externalSelectedDates, weekdayNames = calendar_constants_1.DEFAULT_WEEKDAY_NAMES, monthNames = calendar_constants_1.DEFAULT_MONTH_NAMES, onDateSelect, onSelectedDatesChange, children, }) => {

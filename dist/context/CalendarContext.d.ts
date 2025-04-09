@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { CalendarContextType } from "@/lib/types/calendar.types";
+import { CalendarContextType } from "../types/calendar.types";
 interface CalendarProviderProps {
     initialMonth?: number;
     initialYear?: number;

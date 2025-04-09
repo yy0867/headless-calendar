@@ -1,8 +1,7 @@
 "use strict";
-"use client";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("react/jsx-runtime");
-const CalendarContext_1 = require("@/lib/context/CalendarContext");
+const CalendarContext_1 = require("../context/CalendarContext");
 const CalendarCell = ({ className, day, children }) => {
     const { days, selectDate } = (0, CalendarContext_1.useCalendar)();
     if (children) {

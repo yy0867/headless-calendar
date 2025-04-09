@@ -1,8 +1,7 @@
 "use strict";
-"use client";
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsx_runtime_1 = require("react/jsx-runtime");
-const CalendarContext_1 = require("@/lib/context/CalendarContext");
+const CalendarContext_1 = require("../context/CalendarContext");
 const PrevButton = ({ className, label = "Prev month", children, }) => {
     const { goToPrevMonth } = (0, CalendarContext_1.useCalendar)();
     return ((0, jsx_runtime_1.jsx)("button", { onClick: goToPrevMonth, "aria-label": label, className: className, children: children || ((0, jsx_runtime_1.jsx)("svg", { viewBox: "0 0 24 24", width: "24", height: "24", children: (0, jsx_runtime_1.jsx)("path", { d: "M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" }) })) }));

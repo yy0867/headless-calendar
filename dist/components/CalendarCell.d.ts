@@ -1,4 +1,4 @@
-import { CalendarDay } from "@/lib/types/calendar.types";
+import { CalendarDay } from "../types/calendar.types";
 import { ReactNode } from "react";
 interface CalendarCellProps {
     className?: string;
