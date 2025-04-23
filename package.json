@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/your-username/headless-calendar.git"
+    "url": "git+https://github.com/yy0867/headless-calendar"
   },
   "license": "MIT",
   "keywords": [
